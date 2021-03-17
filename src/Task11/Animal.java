@@ -1,4 +1,6 @@
 package Task11;
 
-public class Animal {
+public abstract class Animal {
+    static void say(){
+    }
 }
