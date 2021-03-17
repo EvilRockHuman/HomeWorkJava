@@ -1,6 +1,7 @@
 package Task11;
 
-public abstract class Animal {
-    static void say(){
+public class Animal {
+    public void say(){
+        System.out.println();
     }
 }

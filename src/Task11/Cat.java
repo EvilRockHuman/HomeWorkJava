@@ -1,7 +1,8 @@
 package Task11;
 
 public class Cat extends Animal {
-    public Animal() {
+    @Override
+    public void say(){
         System.out.println("meow-meow");
     }
 }
