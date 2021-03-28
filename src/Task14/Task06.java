@@ -1,5 +1,6 @@
 package Task14;
 
+import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -12,10 +13,11 @@ public class Task06 {
         nameAndHappyDays.put(600, "Zmitrovich");
         nameAndHappyDays.put(390, "Durakov");
         nameAndHappyDays.put(245, "Indorob");
-
-        for (Integer i: nameAndHappyDays.keySet()) {
-            if (i>500) {
-                nameAndHappyDays.remove(nameAndHappyDays.get(i));
+        Iterator<Integer> iterator = nameAndHappyDays.keySet().iterator();
+        while (iterator.hasNext()){
+            Integer next = iterator.next();
+            if(next.hashCode()<500){
+                iterator.remove();
             }
         }
         System.out.println(nameAndHappyDays);
