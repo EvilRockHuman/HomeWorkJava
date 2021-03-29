@@ -23,7 +23,16 @@ public class Task03 {
                 j += 1;
             }
         }
-        System.out.print("Совпадений найдено по данной записи: ");
+        System.out.print("Совпадений найдено по фамилии: ");
         System.out.println(j);
+        int k = 0;
+        Iterator<String> iterator2 = waitMe.keySet().iterator();
+        for (int i = 0; i < waitMe.size(); i++) {
+            if (iterator2.next() == "Sergey") {
+                k += 1;
+            }
+        }
+        System.out.print("Совпадений найдено по имени: ");
+        System.out.println(k);
     }
 }
