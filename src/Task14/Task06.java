@@ -19,6 +19,7 @@ public class Task06 {
             if(next.hashCode()<500){
                 iterator.remove();
             }
+
         }
         System.out.println(nameAndHappyDays);
     }

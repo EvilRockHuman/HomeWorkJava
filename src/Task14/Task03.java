@@ -12,17 +12,29 @@ public class Task03 {
         waitMe.put("Petr", "Petrov");
         waitMe.put("Mark", "Shewcov");
         waitMe.put("Mir", "Mala");
-        waitMe.put("Sara", "Buba");
+        waitMe.put("Lara", "Buba");
         waitMe.put("Mur", "Mnogo");
         waitMe.put("Tur", "Mala");
         waitMe.put("Bar", "Buba");
-        Iterator<String> iterator = waitMe.keySet().iterator();
-        Set<String> strings = waitMe.keySet();
-        for(String k : waitMe.values()){
-            System.out.println(k);
-            if(k=="Petrov"){
-                waitMe.remove(k);
+        int j = 1;
+        Iterator<String> iterator = waitMe.values().iterator();
+        for (int i = 0; i < waitMe.size(); i++) {
+            if(iterator.next()=="Buba"){
+                j+=1;
+                System.out.println("1");
+            }
 
+        }
+        System.out.println(j);
+
+
+
+
+
+        while (iterator.hasNext()){
+            String next = iterator.next();
+            if(next.equals("Lara")){
+                iterator.remove();
             }
         }
         System.out.println(waitMe);
