@@ -19,7 +19,7 @@ public class Task11 {
                 " Then she usually reads a book or just watches TV. My father is a doctor." +
                 " He is tall and handsome. He has short dark hair and gray eyes." +
                 " He is a very hardworking man. He is rather strict with us, but always fair." +
-                " My elder brother Ken is thirteen, and he is very clever.";
+                " My elder brother Ken is thirteen, and he is very clever. AND";
         String simple = "and";
         System.out.println(Arrays.toString(arrayList(text,simple).toArray()));
         System.out.print("Кол-во одинаковых слов в тексте: ");
@@ -32,7 +32,7 @@ public class Task11 {
             int j = 0;
             while (i + j < text.length() &&
                     j < simple.length() &&
-                    simple.charAt(j) == text.charAt(i+j)) {
+                    simple.toUpperCase().charAt(j) == text.toUpperCase().charAt(i+j)) {
                 j++;
             }
             if (j == simple.length()) {
@@ -41,7 +41,6 @@ public class Task11 {
         }
         return foundWord;
     }
-
     }
 
 
