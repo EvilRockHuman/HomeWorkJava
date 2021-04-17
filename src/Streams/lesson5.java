@@ -11,7 +11,7 @@ public class lesson5 {
 
     private static String name(String nameFile) {
         String nameFileReader = "";
-            try (FileInputStream fis = new FileInputStream("C:\\\\Users\\\\User\\\\IdeaProjects\\\\HomeWorkJava\\\\src\\\\Streams\\\\"+nameFile)) {
+            try (FileInputStream fis = new FileInputStream("C:\\\\Users\\\\User\\\\IdeaProjects\\\\HomeWorkJava\\\\src\\\\Streams\\\\file\\"+nameFile)) {
                 Scanner scanner = new Scanner(fis);
                 nameFileReader = scanner.nextLine();
             } catch (Exception e) {

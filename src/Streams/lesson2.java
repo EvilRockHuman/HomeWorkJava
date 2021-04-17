@@ -10,7 +10,7 @@ public class lesson2 {
 
     private static String lineOne() {
         String name = "";
-        try (FileInputStream fis = new FileInputStream("C:\\\\Users\\\\User\\\\IdeaProjects\\\\HomeWorkJava\\\\src\\\\Streams\\\\gg.txt")) {
+        try (FileInputStream fis = new FileInputStream("C:\\Users\\User\\IdeaProjects\\HomeWorkJava\\src\\Streams\\file\\gg.txt")) {
             Scanner scanner = new Scanner(fis);
             name = scanner.nextLine();
             name = name.substring(10);
@@ -22,7 +22,7 @@ public class lesson2 {
 
     private static String lineTwo() {
         String name = "";
-        try (FileInputStream fis = new FileInputStream("C:\\\\Users\\\\User\\\\IdeaProjects\\\\HomeWorkJava\\\\src\\\\Streams\\\\gg.txt")) {
+        try (FileInputStream fis = new FileInputStream("C:\\Users\\User\\IdeaProjects\\HomeWorkJava\\src\\Streams\\file\\gg.txt")) {
             Scanner scanner = new Scanner(fis);
             name = scanner.nextLine();
             name = scanner.nextLine();
@@ -35,7 +35,7 @@ public class lesson2 {
 
     private static boolean newFile(String name, String text) {
         boolean finish = false;
-        try (FileOutputStream fos = new FileOutputStream("C:\\\\Users\\\\User\\\\IdeaProjects\\\\HomeWorkJava\\\\src\\\\Streams\\\\" + name)) {
+        try (FileOutputStream fos = new FileOutputStream("C:\\\\Users\\\\User\\\\IdeaProjects\\\\HomeWorkJava\\\\src\\\\Streams\\\\file\\" + name)) {
             byte[] bytes = lineTwo().getBytes();
             fos.write(bytes, 0, bytes.length);
             System.out.println(finish = true);
