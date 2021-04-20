@@ -1,6 +1,7 @@
 package Streams;
 
 import java.io.*;
+import java.nio.Buffer;
 import java.util.*;
 
 public class lesson3 {
@@ -30,11 +31,10 @@ public class lesson3 {
             List<String> text = maps.getValue();
             try{
                 File file = new File("C:\\Users\\User\\IdeaProjects\\HomeWorkJava\\src\\Streams\\file\\"+fileName);
-                Writer writer = new FileWriter(file,false);
+                BufferedWriter writer = new BufferedWriter(new FileWriter(file,false));
                 for (String tmp: text) {
                     writer.write(tmp+"\n");
                 }
-                writer.flush();
                 System.out.println(true);
             } catch (Exception e ){
                 System.err.println(false);

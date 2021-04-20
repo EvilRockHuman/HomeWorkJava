@@ -38,10 +38,9 @@ public class lesson2 {
         try (FileOutputStream fos = new FileOutputStream("C:\\\\Users\\\\User\\\\IdeaProjects\\\\HomeWorkJava\\\\src\\\\Streams\\\\file\\" + name)) {
             byte[] bytes = lineTwo().getBytes();
             fos.write(bytes, 0, bytes.length);
-            System.out.println(finish = true);
+            return true;
         } catch (Exception e) {
-            System.out.println(false);
+            return false;
         }
-        return finish;
     }
 }

@@ -14,14 +14,14 @@ public class lesson1 {
         listSave(list,"lesson1");
     }
 
-    private static void listSave(List<String> list, String fileName) {
+    private static boolean listSave(List<String> list, String fileName) {
         try (OutputStreamWriter out = new OutputStreamWriter(new FileOutputStream("C:\\Users\\User\\IdeaProjects\\HomeWorkJava\\src\\Streams\\file\\"+fileName))) {
             for (String strings : list) {
                 out.write(strings);
             }
-            System.out.println(true);
+            return true;
         } catch (Exception e) {
-            System.err.println(false);
+          return false;
         }
     }
 }
